@@ -11,7 +11,7 @@ function Image (props){
     return (
         <div>
             {/* {weather()} */}
-            <h1>{nullCheck(props).description}</h1>
+            <h1>{nullCheck(props).id}</h1>
             {/* <img src={require(`./assets/${nullCheck(props).main}.png`)} /> */}
         </div>
     );
