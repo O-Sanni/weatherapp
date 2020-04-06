@@ -35,13 +35,12 @@ class HomePage extends React.Component{
            this.setState({saturdayTemp: location.data.daily[5].temp});
            this.setState({sundayTemp: location.data.daily[6].temp});   
            this.setState({mondayImg: location.data.daily[0].weather[0]});
-        //    this.setState({tuesdayImg: location.data.daily[1].weather[0]});
-        //    this.setState({wednesdayImg: location.data.daily[2].weather[0]});
-        //    this.setState({thursdayImg: location.data.daily[3].weather[0]});
-        //    this.setState({fridayImg: location.data.daily[4].weather[0]});
-        //    this.setState({saturdayImg: location.data.daily[5].weather[0]});
-        //    this.setState({sundayImg: location.data.daily[6].weather[0]});
-           {console.log(this.state.mondayImg)}   
+           this.setState({tuesdayImg: location.data.daily[1].weather[0]});
+           this.setState({wednesdayImg: location.data.daily[2].weather[0]});
+           this.setState({thursdayImg: location.data.daily[3].weather[0]});
+           this.setState({fridayImg: location.data.daily[4].weather[0]});
+           this.setState({saturdayImg: location.data.daily[5].weather[0]});
+           this.setState({sundayImg: location.data.daily[6].weather[0]});  
         }
           catch(e){
             console.log(e);
