@@ -8,12 +8,19 @@ class HomePage extends React.Component{
         super(props);
         this.state={
             mondayTemp:null,
-            // tuesdayTemp:null,
-            // wednesdayTemp:null,
-            // thursdayTem:null,
-            // fridayTemp:null,
-            // saturdayTemp:null,
-            // sundayTemp: null
+            tuesdayTemp:null,
+            wednesdayTemp:null,
+            thursdayTem:null,
+            fridayTemp:null,
+            saturdayTemp:null,
+            sundayTemp: null,
+            mondayImg:null,
+            tuesdayImg:null,
+            wednesdayImg:null,
+            thursdayImg:null,
+            fridayImg:null,
+            saturdayImg:null,
+            sundayImg: null
         }
     }
     async getLocationInfo(){
@@ -27,6 +34,13 @@ class HomePage extends React.Component{
            this.setState({fridayTemp: location.data.daily[4].temp});
            this.setState({saturdayTemp: location.data.daily[5].temp});
            this.setState({sundayTemp: location.data.daily[6].temp});   
+           this.setState({mondayImg: location.data.daily[0].weather});
+           this.setState({tuesdayImg: location.data.daily[1].weather});
+           this.setState({wednesdayImg: location.data.daily[2].weather});
+           this.setState({thursdayImg: location.data.daily[3].weather});
+           this.setState({fridayImg: location.data.daily[4].weather});
+           this.setState({saturdayImg: location.data.daily[5].weather});
+           this.setState({sundayImg: location.data.daily[6].weather);   
         }
           catch(e){
             console.log(e);
@@ -39,6 +53,7 @@ class HomePage extends React.Component{
         return (<div>
         <h1>Forecast</h1>
             <h3>Monday:</h3>
+            
             <DailyInfo info={this.state.mondayTemp} />
 
         </div>)
