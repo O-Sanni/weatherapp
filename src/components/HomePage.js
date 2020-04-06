@@ -1,38 +1,38 @@
 import React from "react";
 import axios from "axios";
-
+import DailyInfo from "./DailyInfo";
+// import DailyInfo from "./DailyInfo"
 
 class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            monday:null,
-            tuesday:null,
-            wednesday:null,
-            thursday:null,
-            friday:null,
-            saturday:null,
-            sunday: null
+            mondayTemp:null,
+            // tuesdayTemp:null,
+            // wednesdayTemp:null,
+            // thursdayTem:null,
+            // fridayTemp:null,
+            // saturdayTemp:null,
+            // sundayTemp: null
         }
     }
     async getLocationInfo(){
         const key=process.env.REACT_APP_API_KEY_WEATHER;
         try{
            const location= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&units=imperial&appid=${key}`);
-           this.setState({monday: location.data.daily[0]});
-           this.setState({tuesday: location.data.daily[1]});
-           this.setState({wednesday: location.data.daily[2]});
-           this.setState({thursday: location.data.daily[3]});
-           this.setState({friday: location.data.daily[4]});
-           this.setState({saturday: location.data.daily[5]});
-           this.setState({sunday: location.data.daily[6]});
-           console.log(this.state.monday);  
-           console.log(this.state.tuesday);  
-           console.log(this.state.wednesday);  
-           console.log(this.state.thursday);  
-           console.log(this.state.friday);  
-           console.log(this.state.saturday);  
-           console.log(this.state.sunday);    
+           this.setState(prevState => ({
+            mondayTemp: [...prevState.mondayTemp, location.data.daily[0].temp]
+          }))
+           this.setState(prevState => ({
+            mondayTemp: [...prevState.mondayTemp, location.data.daily[0].weather]
+          }))
+           //this.setState({mondayTemp: location.data.daily[0].temp});
+        //    this.setState({tuesdayTemp: location.data.daily[1].temp});
+        //    this.setState({wednesdayTemp: location.data.daily[2].temp});
+        //    this.setState({thursdayTemp: location.data.daily[3].temp});
+        //    this.setState({fridayTemp: location.data.daily[4].temp});
+        //    this.setState({saturdayTemp: location.data.daily[5].temp});
+        //    this.setState({sundayTemp: location.data.daily[6].temp});   
         }
           catch(e){
             console.log(e);
@@ -42,7 +42,12 @@ class HomePage extends React.Component{
         this.getLocationInfo();
     }
     render(){
-        return (<div>Hello</div>)
+        return (<div>
+        <h1>Forecast</h1>
+            <h3>Monday:</h3>
+            <DailyInfo info={this.state.mondayTemp} />
+
+        </div>)
     }
 
 }
