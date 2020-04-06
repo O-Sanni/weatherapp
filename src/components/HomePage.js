@@ -20,19 +20,13 @@ class HomePage extends React.Component{
         const key=process.env.REACT_APP_API_KEY_WEATHER;
         try{
            const location= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&units=imperial&appid=${key}`);
-           this.setState(prevState => ({
-            mondayTemp: [...prevState.mondayTemp, location.data.daily[0].temp]
-          }))
-           this.setState(prevState => ({
-            mondayTemp: [...prevState.mondayTemp, location.data.daily[0].weather]
-          }))
-           //this.setState({mondayTemp: location.data.daily[0].temp});
-        //    this.setState({tuesdayTemp: location.data.daily[1].temp});
-        //    this.setState({wednesdayTemp: location.data.daily[2].temp});
-        //    this.setState({thursdayTemp: location.data.daily[3].temp});
-        //    this.setState({fridayTemp: location.data.daily[4].temp});
-        //    this.setState({saturdayTemp: location.data.daily[5].temp});
-        //    this.setState({sundayTemp: location.data.daily[6].temp});   
+           this.setState({mondayTemp: location.data.daily[0].temp});
+           this.setState({tuesdayTemp: location.data.daily[1].temp});
+           this.setState({wednesdayTemp: location.data.daily[2].temp});
+           this.setState({thursdayTemp: location.data.daily[3].temp});
+           this.setState({fridayTemp: location.data.daily[4].temp});
+           this.setState({saturdayTemp: location.data.daily[5].temp});
+           this.setState({sundayTemp: location.data.daily[6].temp});   
         }
           catch(e){
             console.log(e);
