@@ -14,7 +14,7 @@ class Home extends React.Component{
             const key=process.env.REACT_APP_API_KEY_WEATHER;
             axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&units=imperial&appid=${key}`)
             .then(res=>{
-                const weather=res.data.daily.temp;
+                const weather=res.data.results;
                 console.log(weather); 
                 this.setState({dataDaily: weather})
             })
@@ -29,3 +29,5 @@ class Home extends React.Component{
             </div>)
         }
     }
+
+    export default Home;

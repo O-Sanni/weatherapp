@@ -2,17 +2,16 @@ import nullCheck from "./nullCheck";
 import React from 'react';
 
 function Image (props){
-    // function weather(){
+    function weather(){
         
-    //     let image=nullCheck(props).main;
-    //     console.log(image);
-    //     return image;
-    // }
+        let image=nullCheck(props).main;
+        console.log(image);
+        return image;
+    }
     return (
         <div>
-            {/* {weather()} */}
-            <h1>{this.props.icon}</h1>
-            {/* <img src={require(`./assets/${nullCheck(props).main}.png`)} /> */}
+            {/* <h1>Weather: {nullCheck(props).main}</h1> */}
+            <img src={require(`./assets/${this.weather()}.png`)} />
         </div>
     );
 };
