@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import DailyInfo from "./DailyInfo";
-import Image from "./Image"
+import Image from "./Image";
+import "./components.css";
 
 class HomePage extends React.Component{
     constructor(props){
@@ -50,19 +51,28 @@ class HomePage extends React.Component{
         this.getLocationInfo();
     }
     render(){
-        return (<div>
-        <h1>Forecast</h1>
-            <h3>Monday:</h3>
+        return (<div id="homepageMain">
+        <div><h3>Monday:</h3>
             <Image info={this.state.mondayImg} />
-            <DailyInfo info={this.state.mondayTemp} />
-            <DailyInfo info={this.state.tuesdayTemp} />
-            <DailyInfo info={this.state.wednesdayTemp} />
-            <h3>Thursday</h3>
-            <DailyInfo info={this.state.thursdayTemp} />
-            <DailyInfo info={this.state.fridayTemp} />
-            <DailyInfo info={this.state.saturdayTemp} />
-            <DailyInfo info={this.state.sundayTemp} />
-
+            <DailyInfo info={this.state.mondayTemp} /></div>
+        <div><h3>Tuesday</h3>
+            <Image info={this.state.tuesdayImg} />
+            <DailyInfo info={this.state.tuesdayTemp} /></div>
+        <div><h3>Wednesday</h3>
+            <Image info={this.state.wednesdayImg} />
+            <DailyInfo info={this.state.wednesdayTemp} /></div>
+        <div><h3>Thursday</h3>
+            <Image info={this.state.thursdayImg} />
+            <DailyInfo info={this.state.thursdayTemp} /></div>
+        <div><h3>Friday</h3>
+            <Image info={this.state.fridayImg} />
+            <DailyInfo info={this.state.fridayTemp} /></div>
+        <div><h3>Saturday</h3>
+            <Image info={this.state.saturdayImg} />
+            <DailyInfo info={this.state.saturdayTemp} /></div>
+        <div><h3>Sunday</h3>
+            <Image info={this.state.sundayImg} />
+            <DailyInfo info={this.state.sundayTemp} /></div>
         </div>)
     }
 

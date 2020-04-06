@@ -1,0 +1,9 @@
+/* Home Page */
+#homepageMain{
+display:flex;
+flex-direction: row;
+}
+#weatherImg{
+width: 200px;
+height: 200px;
+}
