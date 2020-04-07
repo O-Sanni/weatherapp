@@ -59,25 +59,33 @@ function App() {
   return <h1> Please choose city</h1>
 }
 function NewYork(){
-  return  (<div><h1>New York</h1>
-  <HomePage info="lat=40.7143&lon=-74.006" /></div>)
+  return  ( <div>
+              <h1>New York</h1>
+              <HomePage info="lat=40.7143&lon=-74.006" />
+            </div>)
 }
 function Brooklyn(){
-  return  (<div><h1>Brooklyn</h1>
+  return  ( <div>
+  <h1>Brooklyn</h1>
   <HomePage info="lat=40.650&lon=-73.949" /></div>)
 }
 function Bronx(){
-  return  (<div>
-  <h1>Bronx</h1>
-  <HomePage info="lat=40.837&lon=-73.865" /></div>)
+  return  ( <div>
+              <h1>Bronx</h1>
+              <HomePage info="lat=40.837&lon=-73.865" />
+            </div>)
 }
 function StatenIsland(){
-  return  (<div><h1>Staten Island</h1>
-  <HomePage info="lat=40.579&lon=-74.155" /></div>)
+  return  ( <div>
+              <h1>Staten Island</h1>
+              <HomePage info="lat=40.579&lon=-74.155" />
+            </div>)
 }
 function Queens(){
-  return  (<div><h1>Queens</h1>
-  <HomePage info="lat=40.579&lon=-74.155" /></div>)
+  return  ( <div>
+              <h1>Queens</h1>
+              <HomePage info="lat=40.579&lon=-74.155" />
+            </div>)
 }
 
 
