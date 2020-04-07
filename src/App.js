@@ -12,7 +12,7 @@ function App() {
     <nav>
       <ul>
         <li>
-          <Link to="/" exact component={"/"}>Main Page</Link>
+          <Link to="/" >Main Page</Link>
         </li>
         <li>
           <Link to="/new_york">New York</Link>
@@ -33,7 +33,7 @@ function App() {
     </nav>
     <Switch>
 
-      <Route path="/">
+      <Route path="/" exact component={"/"}>
         <MainPage />
       </Route>
       <Route path="/new_york">
