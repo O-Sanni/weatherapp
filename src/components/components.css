@@ -2,6 +2,7 @@
 #homepageMain{
 display:flex;
 flex-direction: row;
+margin-left: 350px;
 }
 #weatherImg{
 width: 100px;
