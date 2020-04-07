@@ -52,25 +52,25 @@ class HomePage extends React.Component{
     }
     render(){
         return (<div id="homepageMain">
-        <div><h3>Monday</h3>
+        <div><h3 className="days">Monday</h3>
             <Image info={this.state.mondayImg} />
             <DailyInfo info={this.state.mondayTemp} /></div>
-        <div><h3>Tuesday</h3>
+        <div><h3 className="days">Tuesday</h3>
             <Image info={this.state.tuesdayImg} />
             <DailyInfo info={this.state.tuesdayTemp} /></div>
-        <div><h3>Wednesday</h3>
+        <div><h3 className="days">Wednesday</h3>
             <Image info={this.state.wednesdayImg} />
             <DailyInfo info={this.state.wednesdayTemp} /></div>
-        <div><h3>Thursday</h3>
+        <div><h3 className="days">Thursday</h3>
             <Image info={this.state.thursdayImg} />
             <DailyInfo info={this.state.thursdayTemp} /></div>
-        <div><h3>Friday</h3>
+        <div><h3 className="days">Friday</h3>
             <Image info={this.state.fridayImg} />
             <DailyInfo info={this.state.fridayTemp} /></div>
-        <div><h3>Saturday</h3>
+        <div><h3 className="days">Saturday</h3>
             <Image info={this.state.saturdayImg} />
             <DailyInfo info={this.state.saturdayTemp} /></div>
-        <div><h3>Sunday</h3>
+        <div><h3 className="days">Sunday</h3>
             <Image info={this.state.sundayImg} />
             <DailyInfo info={this.state.sundayTemp} /></div>
         </div>)
