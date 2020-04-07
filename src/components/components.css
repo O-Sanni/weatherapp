@@ -7,3 +7,8 @@ flex-direction: row;
 width: 100px;
 height: 100px;
 }
+
+.temperature{
+    font-family: 'Amaranth', sans-serif;
+    color:purple;
+}
