@@ -52,7 +52,7 @@ class HomePage extends React.Component{
     }
     render(){
         return (<div id="homepageMain">
-        <div><h3>Monday:</h3>
+        <div><h3>Monday</h3>
             <Image info={this.state.mondayImg} />
             <DailyInfo info={this.state.mondayTemp} /></div>
         <div><h3>Tuesday</h3>
