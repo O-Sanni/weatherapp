@@ -12,3 +12,11 @@ ul{
   justify-content: space-around;
 }
 
+nav{
+  margin-bottom: 75px;
+}
+
+h1{
+  font-family: 'Amaranth', sans-serif;
+  color: purple;
+}
