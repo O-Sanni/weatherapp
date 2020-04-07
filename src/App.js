@@ -12,22 +12,22 @@ function App() {
     <nav>
       <ul>
         <li>
-          <Link to="/">Main Page</Link>
+          <Link to="/" exact component={"/"}>Main Page</Link>
         </li>
         <li>
-          <Link to ="/new_york">New York</Link>
+          <Link to="/new_york">New York</Link>
         </li>
         <li>
-          <Link to ="/brooklyn">Brooklyn</Link>
+          <Link to="/brooklyn">Brooklyn</Link>
         </li>
         <li>
-          <Link to ="/bronx">Bronx</Link>
+          <Link to="/bronx">Bronx</Link>
         </li>
         <li>
-          <Link to ="/staten_island">Staten Island</Link>
+          <Link to="/staten_island">Staten Island</Link>
         </li>
         <li>
-          <Link to ="/queens">Queens</Link>
+          <Link to="/queens">Queens</Link>
         </li>
       </ul>
     </nav>
