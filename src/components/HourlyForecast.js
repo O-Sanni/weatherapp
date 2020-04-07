@@ -16,7 +16,7 @@ class HourlyForecast extends React.Component{
         try{
            const location= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&units=imperial&appid=${key}`);
         let arrayTemp=[];
-           arrayTemp=location.map((value)=>{
+           arrayTemp=location.map(function (value){
             return value.location.hourly.temp;
         })
            this.setState({hourlyData: arrayTemp})
