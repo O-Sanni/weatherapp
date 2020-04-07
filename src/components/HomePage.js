@@ -76,13 +76,18 @@ class HomePage extends React.Component{
                     <div>
                         <h3 className="days">Friday</h3>
                         <Image info={this.state.fridayImg} />
-                        <DailyInfo info={this.state.fridayTemp} /></div>
-                    <div><h3 className="days">Saturday</h3>
-                    <Image info={this.state.saturdayImg} />
-                    <DailyInfo info={this.state.saturdayTemp} /></div>
-                    <div><h3 className="days">Sunday</h3>
-                    <Image info={this.state.sundayImg} />
-                    <DailyInfo info={this.state.sundayTemp} /></div>
+                        <DailyInfo info={this.state.fridayTemp} />
+                    </div>
+                    <div>
+                        <h3 className="days">Saturday</h3>
+                        <Image info={this.state.saturdayImg} />
+                        <DailyInfo info={this.state.saturdayTemp} />
+                    </div>
+                    <div>
+                        <h3 className="days">Sunday</h3>
+                        <Image info={this.state.sundayImg} />
+                        <DailyInfo info={this.state.sundayTemp} />
+                    </div>
                 </div>)
     }
 
