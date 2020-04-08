@@ -9,6 +9,7 @@ class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.state={
+            temp:props.temp,
             info: props.info,
             oneTemp:null,
             twoTemp:null,
@@ -36,8 +37,9 @@ class HomePage extends React.Component{
     async getLocationInfo(){
         console.log(this.state.info)
         const key=process.env.REACT_APP_API_KEY_WEATHER;
+        const numbers= ["one","two", "three","four",]
         try{
-           const location= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?${this.state.info}&units=imperial&appid=${key}`);
+           const location= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?${this.state.info}&units=${this.state.temp}&appid=${key}`);
            this.setState({oneTemp: location.data.daily[0].temp});
            this.setState({twoTemp: location.data.daily[1].temp});
            this.setState({threeTemp: location.data.daily[2].temp});

@@ -31,7 +31,7 @@ function App() {
         </li>
       </ul>
     </nav>
-   {/* <HourlyForecast /> */}
+   <HourlyForecast />
      <Switch>
       <Route path="/" exact component={"/"}>
         <MainPage />
@@ -56,36 +56,42 @@ function App() {
   </Router> 
   );
 }
+let temp="imperial";
+
+
 function MainPage(){
-  return <h1> Please choose city</h1>
-}
+  return (<div>
+          <h1> Please choose  City</h1>
+          </div>)}
+        
 function NewYork(){
   return  ( <div>
               <h1>New York</h1>
-              <HomePage info={"lat=40.7306&lon=-73.935"} />
+              <HomePage info={"lat=40.7306&lon=-73.935"} temp={temp}/>
+  
             </div>)
 }
 function Brooklyn(){
   return  ( <div>
   <h1>Brooklyn</h1>
-  <HomePage info={"lat=40.650&lon=-73.949"} /></div>)
+  <HomePage info={"lat=40.650&lon=-73.949"} temp={temp} /></div>)
 }
 function Bronx(){
   return  ( <div>
               <h1>Bronx</h1>
-              <HomePage info={"lat=40.837&lon=-73.865"} />
+              <HomePage info={"lat=40.837&lon=-73.865"} temp={temp} />
             </div>)
 }
 function StatenIsland(){
   return  ( <div>
               <h1>Staten Island</h1>
-              <HomePage info={"lat=40.579&lon=-74.155"} />
+              <HomePage info={"lat=40.579&lon=-74.155"} temp={temp}/>
             </div>)
 }
 function Queens(){
   return  ( <div>
               <h1>Queens</h1>
-              <HomePage info={"lat=40.579&lon=-74.155"} />
+              <HomePage info={"lat=40.579&lon=-74.155"} temp={temp}/>
             </div>)
 }
 
