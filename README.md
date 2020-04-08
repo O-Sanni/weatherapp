@@ -12,3 +12,5 @@
     1. https://www.youtube.com/watch?v=InoAIgBZIEA
     2. https://reacttraining.com/react-router/web/guides/quick-start
     3. https://openweathermap.org/api
+    4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+    5. https://makitweb.com/convert-unix-timestamp-to-date-time-with-javascript/
