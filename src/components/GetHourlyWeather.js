@@ -53,12 +53,13 @@ class GetHourlyWeather extends React.Component{
                 return "am";
             }
         }
-
+        const dayOfWeek=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
         let hourlyTemp=this.state.temperature.map(response=>{
             let day= new Date (response.dt*1000);
             let time= MidnightCheck(day.getHours()%12);
             let amOrpm=testTime(day.getHours());
            return (<div className="hourly">
+           <p>{dayOfWeek[day.getDay()]}</p>
             <p>{time}{amOrpm}</p>
             <p>{Math.trunc(response.temp)}{this.state.fOrC}</p>
             <p>Pressure:{response.pressure}mb</p>
