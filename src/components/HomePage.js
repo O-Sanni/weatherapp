@@ -37,7 +37,6 @@ class HomePage extends React.Component{
     async getLocationInfo(){
         console.log(this.state.info)
         const key=process.env.REACT_APP_API_KEY_WEATHER;
-        const numbers= ["one","two", "three","four",]
         try{
            const location= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?${this.state.info}&units=${this.state.temp}&appid=${key}`);
            this.setState({oneTemp: location.data.daily[0].temp});
@@ -70,42 +69,43 @@ class HomePage extends React.Component{
         this.getLocationInfo();
     }
     render(){
+
         return (
                 <div id="homepageMain">
                     <div>
                         <GetDay info={this.state.oneDate} />
                         <Image info={this.state.oneImg} />
-                        <DailyInfo info={this.state.oneTemp} />
+                        <DailyInfo info={this.state.oneTemp} temp={this.state.temp}/>
                     </div>
-                    <div>
+                     <div>
                         <GetDay info={this.state.twoDate} />
                         <Image info={this.state.twoImg} />
-                        <DailyInfo info={this.state.twoTemp} />
+                        <DailyInfo info={this.state.twoTemp} temp={this.state.temp} />
                     </div>
                     <div>
                         <GetDay info={this.state.threeDate} />
                         <Image info={this.state.threeImg} />
-                        <DailyInfo info={this.state.threeTemp} />
+                        <DailyInfo info={this.state.threeTemp}  temp={this.state.temp}/>
                     </div>
                     <div>
                         <GetDay info={this.state.fourDate} />
                         <Image info={this.state.fourImg} />
-                        <DailyInfo info={this.state.fourTemp} />
+                        <DailyInfo info={this.state.fourTemp} temp={this.state.temp} />
                     </div>
                     <div>
                         <GetDay info={this.state.fiveDate} />
                         <Image info={this.state.fiveImg} />
-                        <DailyInfo info={this.state.fiveTemp} />
+                        <DailyInfo info={this.state.fiveTemp} temp={this.state.temp} />
                     </div>
                     <div>
                         <GetDay info={this.state.sixDate} />
                         <Image info={this.state.sixImg} />
-                        <DailyInfo info={this.state.sixTemp} />
+                        <DailyInfo info={this.state.sixTemp} temp={this.state.temp} />
                     </div>
                     <div>
                         <GetDay info={this.state.sevenDate} />
                         <Image info={this.state.sevenImg} />
-                        <DailyInfo info={this.state.sevenTemp} />
+                        <DailyInfo info={this.state.sevenTemp} temp={this.state.temp}/>
                     </div>
                 </div>)
     }

@@ -2,6 +2,8 @@
   text-align: center;
 }
 li{
+  display:flex;
+  flex-direction: column;
   list-style: none;
   font-family: 'Amaranth', sans-serif;
 }
