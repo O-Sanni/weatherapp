@@ -83,8 +83,8 @@ render(){
 }
 }
 
-let temp="metric";
-let hourly;
+let temp="imperial";
+
 
 function MainPage(){
   return (<div>
