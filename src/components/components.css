@@ -2,9 +2,9 @@
 #homepageMain{
 display:flex;
 flex-direction: row;
-margin-left: 350px;
+margin-left: 200px;
 }
-#weatherImg{
+.weatherImg{
 width: 100px;
 height: 100px;
 }
@@ -16,4 +16,24 @@ height: 100px;
 .days{
     font-family: 'Amaranth', sans-serif;
     color:purple;
+    width: 150px;
+    height:50px;
+}
+p{
+    font-family: 'Amaranth', sans-serif;
+    color:purple;
+}
+
+#newyorkHourly{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -150px;
+}
+.weatherI{
+width: 50px;
+height: 50px;
+}
+.hourly{
+    margin: 20px;
 }
