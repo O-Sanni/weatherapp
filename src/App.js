@@ -5,12 +5,7 @@ import HomePage from "./components/HomePage"
 import GetHourlyWeather from "./components/GetHourlyWeather"
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      temp: "metric"
-    }
-  }
+  
 render(){
   return (
    <Router>
